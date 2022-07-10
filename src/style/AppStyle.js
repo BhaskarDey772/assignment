@@ -11,10 +11,9 @@ export const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(2),
       },
     search: {
-      position: 'relative',
       display:"flex",
       alignItems:"center",
-      width:"40%"
+      width:"40%",
       
     },
     searchIcon: {
@@ -35,7 +34,7 @@ export const useStyles = makeStyles((theme) => ({
       border:"1px solid #3f50b4",
       borderRadius:"5px",
       backgroundColor:"transparent",
-      paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+      paddingLeft: "3rem",
       transition: theme.transitions.create('width'),
       width: '50%',
       [theme.breakpoints.up('sm')]: {
