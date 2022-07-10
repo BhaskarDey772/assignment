@@ -14,6 +14,7 @@ export const useStyles = makeStyles((theme) => ({
       position: 'relative',
       display:"flex",
       alignItems:"center",
+      width:"40%"
       
     },
     searchIcon: {

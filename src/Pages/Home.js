@@ -74,11 +74,15 @@ const Home = () => {
 
                         <Typography style={{textTransform:"capitalize"}}><span style={{color:"#3f50b4", textTransform:"uppercase"}}>Title</span> : {item?.title}</Typography>
                         <Typography style={{textTransform:"capitalize"}}><span style={{color:"#3f50b4", textTransform:"uppercase"}}>Author</span> :{item?.author}</Typography>
-                        <Grid style={{display:"flex", gap:"1rem"}}>
-                            <span style={{color:"#3f50b4", textTransform:"uppercase"}}>Tags</span>:
+                        <Grid style={{display:"flex", gap:"0.2rem", flexDirection:"column"}}>
+                            <span style={{color:"#3f50b4", textTransform:"uppercase"}}>Tags :</span>
                             {arr.map((item, index)=>{
 
-                                return <Typography> {index+1}) {item}</Typography>
+                                return (
+                                  <>
+                                <Typography>{index+1} ) {item}</Typography>
+                                </>
+                                )
                             })}
                         </Grid>
                     </Grid>
