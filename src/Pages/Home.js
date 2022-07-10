@@ -39,7 +39,7 @@ const Home = () => {
     setCurrentPage(value)
   }
 
-  console.log(data)
+
   if(data.length===0) return <Grid sx={12} style={{display:"flex", alignItems:"center", justifyContent:"center", minHeight:"100vh"}}><CircularProgress/></Grid>
 
   else {
