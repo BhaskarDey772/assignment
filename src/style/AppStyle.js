@@ -33,6 +33,7 @@ export const useStyles = makeStyles((theme) => ({
       // vertical padding + font size from searchIcon
       border:"1px solid #3f50b4",
       borderRadius:"5px",
+      backgroundColor:"transparent",
       paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
       transition: theme.transitions.create('width'),
       width: '50%',
