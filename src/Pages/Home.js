@@ -25,6 +25,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async()=>{
       await axios.get(`https://hn.algolia.com/api/v1/search?query=${debounce}`).then(({data})=>setData(data)).catch((err)=>console.error(err))
+      setCurrentPage(1)
     }
 
     fetchData()
