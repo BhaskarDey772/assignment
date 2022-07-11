@@ -19,7 +19,7 @@ const DetailsPage = () => {
   useEffect(() => {
 
     const fetchData = async()=>{
-        await axios.get(`  http://hn.algolia.com/api/v1/items/${id}`).then(({data})=>setData(data)).catch((err)=>console.error(err))
+        await axios.get(`  https://hn.algolia.com/api/v1/items/${id}`).then(({data})=>setData(data)).catch((err)=>console.error(err))
     }
 
     fetchData()

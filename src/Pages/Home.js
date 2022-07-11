@@ -24,7 +24,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async()=>{
-      await axios.get(`http://hn.algolia.com/api/v1/search?query=${debounce}`).then(({data})=>setData(data)).catch((err)=>console.error(err))
+      await axios.get(`https://hn.algolia.com/api/v1/search?query=${debounce}`).then(({data})=>setData(data)).catch((err)=>console.error(err))
     }
 
     fetchData()
@@ -47,19 +47,16 @@ const Home = () => {
       <Grid item xs={12} >
         <Paper style={{ paddingBlock:"1rem", paddingInline:'0.5rem' , marginBottom:"2rem"}} >
         
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
+          <div style={{display:"flex",alignItems:"center", width:"30%",padding:"0.2rem 0.5rem",gap:"0.3rem", border:"1px solid #3f50b4"}}>
+            <div style={{paddingTop:"0.3rem"}}>
               <SearchIcon />
             </div>
             <InputBase
               placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
               inputProps={{ 'aria-label': 'search' }}
               value={search}
               onChange={handleSearch}
+              style={{width:"100%"}}
             />
           </div>
 
