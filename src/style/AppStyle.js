@@ -13,8 +13,9 @@ export const useStyles = makeStyles((theme) => ({
     search: {
       display:"flex",
       alignItems:"center",
+      justifyContent:"space-between",
       width:"40%",
-      
+      marginBlock:"1em 2em"
     },
     searchIcon: {
       padding: theme.spacing(0, 2),
@@ -29,6 +30,7 @@ export const useStyles = makeStyles((theme) => ({
       color: 'inherit',
     },
     inputInput: {
+      position:'absolute',
       padding: theme.spacing(1, 1, 1, 0),
       // vertical padding + font size from searchIcon
       border:"1px solid #3f50b4",
@@ -36,7 +38,7 @@ export const useStyles = makeStyles((theme) => ({
       backgroundColor:"transparent",
       paddingLeft: "3rem",
       transition: theme.transitions.create('width'),
-      width: '50%',
+      width: '60%',
       [theme.breakpoints.up('sm')]: {
         width: '12ch',
         '&:focus': {

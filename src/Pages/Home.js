@@ -8,6 +8,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Pagination from '@material-ui/lab/Pagination';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import useDebounce from '../hooks/useDebounce';
 
 const Home = () => {
   const classes = useStyles();
@@ -15,6 +16,7 @@ const Home = () => {
   const [data, setData]=useState("")
   const[currentPage, setCurrentPage] = useState(1)
   let navigate = useNavigate();
+  const debounce = useDebounce(search)
   const handleSearch =(e)=>{
     setSearch(e.target.value)
   }
@@ -22,13 +24,11 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async()=>{
-
-        await axios.get(`http://hn.algolia.com/api/v1/search?query=${search}
-        `).then(({data})=>setData(data)).catch((err)=>console.error(err))
+      await axios.get(`http://hn.algolia.com/api/v1/search?query=${debounce}`).then(({data})=>setData(data)).catch((err)=>console.error(err))
     }
 
     fetchData()
-  }, [search])
+  }, [debounce])
 
   
   const hitsPerPage = 10;
