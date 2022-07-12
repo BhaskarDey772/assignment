@@ -31,8 +31,6 @@ const Home = () => {
 
     fetchData()
   }, [debounce])
-
-  console.log(data)
   const hitsPerPage = 10;
   const indexOfLastExercise = currentPage * hitsPerPage;
   const indexOfFirstExercise = indexOfLastExercise - hitsPerPage
