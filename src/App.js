@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStyles } from './style/AppStyle';
 import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header';
@@ -7,17 +7,18 @@ import DetailsPage from "./Pages/DetailsPage"
 
 const App = () => {
   const classes = useStyles();
+  const [theme, setTheme] = useState(false)
 
   return (
     <div className={classes.root}>
-    <Header/>
+    <Header theme={theme} setTheme={setTheme}/>
     <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/details/:id" element={<DetailsPage/>} /> 
-      </Routes>
-
+    </Routes>
     </div>
   );
 }
 
 export default App
+

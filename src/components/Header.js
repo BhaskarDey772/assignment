@@ -14,7 +14,7 @@ const Header = () => {
   return (
         <Grid item xs={12} style={{marginBottom:"1rem" }}>
      
-          <Toolbar className={classes.paper} style={{backgroundColor:"#3f50b4"}}>
+          <Toolbar className={classes.Toolbar} >
             <IconButton
                 edge="start"
                 className={classes.menuButton}
@@ -35,3 +35,4 @@ const Header = () => {
 }
 
 export default Header
+

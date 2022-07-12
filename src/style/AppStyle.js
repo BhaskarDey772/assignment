@@ -5,56 +5,41 @@ export const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
       maxWidth:"95%",
-      margin:"0 auto"
+      margin:"0 auto",
     },
-    // menuButton: {
-    //     marginRight: theme.spacing(2),
-    //   },
-    // search: {
-    //   display:"flex",
-    //   alignItems:"center",
-    //   width:"50%",
-    //   marginBlock:"1em 2em",
-    //   position:"relative"
-    // },
-    // searchIcon: {
-    //   padding: theme.spacing(0, 2),
-    //   height: '100%',
-    //   pointerEvents: 'none',
-    //   display: 'flex',
-    //   alignItems: 'center',
-    //   justifyContent: 'center',
-     
-
-    // },
-    // inputRoot: {
-    //   color: 'inherit',
-    // },
-    // inputInput: {
-    //   position:'absolute',
-    //   top:-20,
-    //   left:-55,
-    //   padding: theme.spacing(1, 1, 1, 0),
-    //   // vertical padding + font size from searchIcon
-    //   border:"1px solid #3f50b4",
-    //   borderRadius:"5px",
-    //   backgroundColor:"transparent",
-    //   paddingLeft: "3rem",
-    //   transition: theme.transitions.create('width'),
-    //   width: '50%',
-    //   [theme.breakpoints.up('sm')]: {
-    //     width: '12ch',
-    //     '&:focus': {
-    //       width: '20ch',
-    //     },
-    //   },
-    // },
-    paper: {
-      padding: theme.spacing(0.5),
+    loader:{
       display:"flex",
       alignItems:"center",
-      justifyContent:"space-between",
+      justifyContent:"center",
+      minHeight:"100vh",
+    },
+    Toolbar:{
+      backgroundColor:"#3f50b4",
+      display:"flex",
+      alignItems:"center",
+      justifyContent:"space-between"
+    },
+    search:{
+      display:"flex",
+      alignItems:"center", 
+      width:"30vw",
+      padding:"0.2rem 0.5rem",
+      gap:"0.3rem",
+      border:"1px solid #3f50b4"
+    },
+    searchIcon:{
+      paddingTop:"0.3rem"
+    },
+    span:{
+      color:"#3f50b4",
+      textTransform:"uppercase"
+    },
+    paper: {
+      padding: theme.spacing(1),
+      display:"flex",
+      flexDirection:"column",
+      gap:"0.5rem",
       color: theme.palette.text.secondary,
-      paddingInline:"1rem"
+      marginBottom:"2rem"
     },
   }));
