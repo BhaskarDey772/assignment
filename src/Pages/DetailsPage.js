@@ -17,6 +17,7 @@ const DetailsPage = () => {
     
     const paginate =(e, value)=>{
         setCurrentPage(value)
+        window.scrollTo({top:0, behavior:"smooth"})
     }
     
   useEffect(() => {

@@ -37,6 +37,7 @@ const Home = () => {
   const currentHits = data?.hits?.slice(indexOfFirstExercise,indexOfLastExercise)
   const paginate =(e, value)=>{
     setCurrentPage(value)
+    window.scrollTo({top:0, behavior:"smooth"})
   }
 
 
