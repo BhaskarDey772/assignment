@@ -69,7 +69,7 @@ const Home = () => {
                         arr.push(value)
                     }
                     return(
-                    <Grid item xs={12} key={index} style={{border:"1px solid #3f50b4", marginBlock:"0.5rem", cursor:"pointer", padding:"1rem"}} onClick={()=>navigate(`/details/${item?.objectID}`, { replace: true })}>
+                    <Grid item xs={12} key={index} style={{border:"1px solid #3f50b4", marginBlock:"0.5rem", cursor:"pointer", padding:"1rem"}} onClick={()=>navigate(`/details/${item?.objectID}`)}>
 
                         <Typography style={{textTransform:"capitalize"}}><span className={classes.span}>Title</span> : {item?.title}</Typography>
                         <Typography style={{textTransform:"capitalize"}}><span className={classes.span}>Author</span> :{item?.author}</Typography>
