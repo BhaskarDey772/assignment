@@ -11,7 +11,7 @@ const Children = ({item}) => {
     
     <Grid>
         <Grid style={{display:"flex"}}>
-        {item?.author  &&  <Typography variant='h4' style={{textTransform:"capitalize"}}>{item?.author}</Typography>}
+        {item?.author!==null  &&  <Typography variant='h4' style={{textTransform:"capitalize"}}>{item?.author}</Typography>}
         <IconButton  onClick={()=>setState(!state)}>
             {state ?<ArrowDropUpIcon/>:<ArrowDropDownIcon/>}
         </IconButton>
@@ -29,9 +29,9 @@ const Children = ({item}) => {
 }
 else{
     return(
+        item?.author!==null &&
         <Grid>
-           {item?.author && <Typography style={{textTransform:"capitalize"}} variant='h5'>{item?.author}</Typography>}
-            {/* <Typography>{item?.text}</Typography> */}
+            <Typography style={{textTransform:"capitalize"}} variant='h5'>{item?.author}</Typography>
         </Grid>
     )
 }

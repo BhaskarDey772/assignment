@@ -22,7 +22,13 @@ export const useStyles = makeStyles((theme) => ({
     search:{
       display:"flex",
       alignItems:"center", 
-      width:"30vw",
+      width:"95%",
+      [theme.breakpoints.up('sm')]:{
+        width:"25vw",
+        '&:focus': {
+          width: '30vw',
+        },
+      },
       padding:"0.2rem 0.5rem",
       gap:"0.3rem",
       border:"1px solid #3f50b4"

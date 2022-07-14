@@ -71,8 +71,8 @@ const Home = () => {
                     return(
                     <Grid item xs={12} key={index} style={{border:"1px solid #3f50b4", marginBlock:"0.5rem", cursor:"pointer", padding:"1rem"}} onClick={()=>navigate(`/details/${item?.objectID}`)}>
 
-                        <Typography style={{textTransform:"capitalize"}}><span className={classes.span}>Title</span> : {item?.title}</Typography>
-                        <Typography style={{textTransform:"capitalize"}}><span className={classes.span}>Author</span> :{item?.author}</Typography>
+                        <Typography style={{textTransform:"capitalize"}}><span className={classes.span}>Title</span> : {item?.title ? item?.title :"No Title Available"} </Typography>
+                        <Typography style={{textTransform:"capitalize"}}><span className={classes.span}>Author</span> :{item?.author ? item?.author :"No Author Available"}</Typography>
                         <Grid style={{display:"flex", gap:"0.2rem", flexDirection:"column"}}>
                             <span style={{color:"#3f50b4", textTransform:"uppercase"}}>Tags :</span>
                             {arr.map((item, index)=>{

@@ -29,6 +29,8 @@ const DetailsPage = () => {
     fetchData()
   }, [id])
 
+  console.log(data)
+
   if(data.length===0) return <Grid sx={12} className={classes.loader}><CircularProgress/></Grid>
   
     else{
