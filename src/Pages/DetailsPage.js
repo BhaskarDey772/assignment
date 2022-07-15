@@ -32,7 +32,7 @@ const DetailsPage = () => {
     window.scrollTo({top:0, behavior:"smooth"})
   }, [currentPage])
   
-
+console.log(data)
 
   if(data.length===0) return <Grid sx={12} className={classes.loader}><CircularProgress/></Grid>
   
@@ -41,8 +41,8 @@ const DetailsPage = () => {
         <Grid >
             <Paper style={{marginBottom:"2rem", paddingInline:"0.5rem"}}>
     
-                <Typography style={{textTransform:"capitalize"}} variant='h4'><span className={classes.span}>Title</span>:{data?.title}</Typography>
-                <Typography style={{textTransform:"capitalize"}} variant='h5'><span className={classes.span}>Author</span> :{data?.author}</Typography>
+                <Typography style={{textTransform:"capitalize"}} variant='h4'><span className={classes.span}>Title</span> : {data?.title}</Typography>
+                <Typography style={{textTransform:"capitalize"}} variant='h5'><span className={classes.span}>Points</span> : {data?.points}</Typography>
                 <Typography style={{textTransform:"uppercase"}} variant="h4">Children</Typography>
                 <Grid>
                     {currentChildren.map((item)=>{
