@@ -6,12 +6,12 @@ const Children = ({item}) => {
     const [state, setState] = useState(false)
 
 
-    if(item?.children.length > 0){
+    if(item?.children.length > 0 ){
   return (
     
     <Grid>
         <Grid style={{display:"flex"}}>
-        {item?.author!==null  &&  <Typography variant='h4' style={{textTransform:"capitalize"}}>{item?.author}</Typography>}
+        {item?.author!==null  &&  <Typography variant='h4' style={{textTransform:"capitalize"}}>Author : {item?.author}</Typography>}
         <IconButton  onClick={()=>setState(!state)}>
             {state ?<ArrowDropUpIcon/>:<ArrowDropDownIcon/>}
         </IconButton>
@@ -28,13 +28,13 @@ const Children = ({item}) => {
   )
 }
 else{
-    return(
-        item?.author!==null &&
-        <Grid>
-            <Typography style={{textTransform:"capitalize"}} variant='h5'>{item?.author}</Typography>
-        </Grid>
-    )
-}
+        return(
+            
+            <Grid>
+               <Typography style={{textTransform:"capitalize"}} variant='h5'>Author : {item?.author ? item?.author : "Author not available"}</Typography>
+            </Grid>
+        )
+    }
 }
 
 export default Children
