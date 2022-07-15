@@ -37,8 +37,13 @@ const Home = () => {
   const currentHits = data?.hits?.slice(indexOfFirstExercise,indexOfLastExercise)
   const paginate =(e, value)=>{
     setCurrentPage(value)
-    window.scrollTo({top:0, behavior:"smooth"})
+    
   }
+
+  useEffect(() => {
+    window.scrollTo({top:0, behavior:"smooth"})
+  }, [currentPage])
+  
 
 
   if(data.length===0) return <Grid sx={12} className={classes.loader}><CircularProgress/></Grid>

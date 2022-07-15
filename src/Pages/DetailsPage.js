@@ -17,7 +17,6 @@ const DetailsPage = () => {
     
     const paginate =(e, value)=>{
         setCurrentPage(value)
-        window.scrollTo({top:0, behavior:"smooth"})
     }
     
   useEffect(() => {
@@ -29,7 +28,11 @@ const DetailsPage = () => {
     fetchData()
   }, [id])
 
-  console.log(data)
+  useEffect(() => {
+    window.scrollTo({top:0, behavior:"smooth"})
+  }, [currentPage])
+  
+
 
   if(data.length===0) return <Grid sx={12} className={classes.loader}><CircularProgress/></Grid>
   
