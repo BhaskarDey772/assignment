@@ -50,7 +50,7 @@ const Home = () => {
 
   else {
   return (
-      <Grid item xs={12} >
+      <Grid item xs={12}>
         <Paper className={classes.paper} >
         
           <div className={classes.search}>
@@ -58,6 +58,7 @@ const Home = () => {
               <SearchIcon />
             </div>
             <InputBase
+            
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
               value={search}

@@ -10,8 +10,8 @@ const Children = ({item}) => {
   return (
     
     <Grid>
-        <Grid style={{display:"flex"}}>
-        {item?.author!==null  &&  <Typography variant='h4' style={{textTransform:"capitalize"}}>Author : {item?.author}</Typography>}
+        <Grid style={{display:"flex"}} data-testid="search">
+            <Typography variant='h4' style={{textTransform:"capitalize"}}>Author : {item?.author ? item?.author : "Author not available"}</Typography>
         <IconButton  onClick={()=>setState(!state)}>
             {state ?<ArrowDropUpIcon/>:<ArrowDropDownIcon/>}
         </IconButton>
