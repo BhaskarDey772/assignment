@@ -32,7 +32,6 @@ const DetailsPage = () => {
     window.scrollTo({top:0, behavior:"smooth"})
   }, [currentPage])
   
-console.log(data)
 
   if(data.length===0) return <Grid sx={12} className={classes.loader}><CircularProgress/></Grid>
   
